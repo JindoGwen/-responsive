@@ -1,0 +1,40 @@
+html {font-size: 20px; }
+body {font-size: 0,8rem;}/*0.8rem ->16px 부모사이즈의 *0.8*/
+
+.container {display: flex; gap: 30px; width: 1200px; margin: 0 auto;}
+
+header {line-height: 5rem;}
+.gnb{background: #f1f1f1;}
+.gnb>ul { gap: 0;}
+.gnb>ul>li { flex: 1; text-align: center; }
+.gnb>ul>li~li {border-left: 1px solid #ddd; }
+.gnb>ul>li>a {display: block; line-height: 2rem;}
+
+.step {padding: 5rem 0; background: #ff0; text-align: center;}
+.step h2 {font-size: 1.25rem; margin: 0 0 0.5rem 0;} /*1.25rem -> 25px * 0.5rem ->10px*/
+.step p {font-size: 0.75rem; margin: 0 0 1.5rem 0;}
+
+
+.mbtn { display: none;}
+
+@media  (max-width:1200px){
+.container { width: auto;}    
+.step {padding: 100px 0; background: #f00; text-align: center;}
+}/*화면이 1200px 이하면 다르게 적용해라  만약 
+media에 flex column 과 width auto를 적용하면 사진이 세로로 변경됨 (column을 안하면 사진이 가로로 작아짐 - 모바일에서는 너무 작음  */
+
+
+@media (max-width: 768px) {
+    .container{display: flex; gap: 30px; width: auto; margin: 0 auto; padding: 0 0.75rem;}
+    .step {padding: 100px 0; background: rgb(76, 0, 255); text-align: center;}  
+}
+
+@media (max-width:560px) {
+     html {font-size: 16px;}
+     .mbtn {position: fixed; inset: 1rem 1rem auto auto ; display: block; }
+     .gnb{ display:none; background: #fff;}
+     .gnb>ul>li~li {border-left: none; border-top: 1px solid #ddd; }
+    .container{ flex-direction: column;}
+    .step { background: rgb(76, 0, 255); color: #fff;}
+    .step h2 {font-size: 8vw; }
+}
