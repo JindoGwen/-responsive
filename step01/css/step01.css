@@ -1,5 +1,5 @@
 html {font-size: 20px; }
-body {font-size: 0,8rem;}/*0.8rem ->16px 부모사이즈의 *0.8*/
+body {font-size: 0,8rem;}/*0.8rem ->16px html사이즈의 *0.8*/
 
 .container {display: flex; gap: 30px; width: 1200px; margin: 0 auto;}
 
